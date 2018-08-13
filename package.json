@@ -1,0 +1,23 @@
+{
+  "name": "cm7",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/Cm7.umd.js",
+  "scripts": {
+    "clean": "/bin/rm -rf dist",
+    "build": "npm run clean && rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jason Yu <jason.yu@thehutgroup.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cm7-lang-parser": "^0.2.2"
+  },
+  "devDependencies": {
+    "rollup": "^0.64.1",
+    "rollup-plugin-commonjs": "^9.1.5",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.3.0"
+  }
+}

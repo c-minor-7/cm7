@@ -3,8 +3,19 @@ import Cm7 from '../main';
 describe('cm7', () => {
   const src = `key=C
 
+1 1M7/3
+(L)ondon bridge is (f)alling down
+2m 4madd4/7b
+(F)alling (d)own
 1
-(L)ondon bridge is falling down`;
+(F)alling down
+
+1
+(L)ondon bridge is falling down
+2m
+(F)alling down
+1
+(F)alling down`;
 
   afterEach(() => {
     document.body.innerHTML = '';
@@ -35,6 +46,17 @@ describe('cm7', () => {
     });
 
     expect(document.querySelector(`#${id}`).textContent).toBe(`C
-London bridge is falling down`);
+London bridge is falling down
+Dm
+Falling down
+C
+Falling down
+
+C
+London bridge is falling down
+Dm
+Falling down
+C
+Falling down`);
   });
 });

@@ -34,29 +34,4 @@ describe('cm7', () => {
 
     expect(document.querySelector(`#${id}`).innerHTML).not.toBe(content);
   });
-
-  it('should put the song into the target element', async () => {
-    const id = 'my-awesome-chord-displayer';
-
-    document.body.innerHTML = `<div id="${id}"></div>`;
-
-    Cm7({
-      el: `#${id}`,
-      src,
-    });
-
-    expect(document.querySelector(`#${id}`).textContent).toBe(`C
-London bridge is falling down
-Dm
-Falling down
-C
-Falling down
-
-C
-London bridge is falling down
-Dm
-Falling down
-C
-Falling down`);
-  });
 });

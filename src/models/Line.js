@@ -1,3 +1,5 @@
+import Chord from './Chord';
+
 import createEl from '../helpers/createEl';
 
 export default class Line {
@@ -5,11 +7,11 @@ export default class Line {
     Object.assign(this, { chords, text });
   }
 
-  toDOM() {
+  toDOM(key) {
     return createEl('div.cm7_line', {
       children: [
         createEl('div.cm7_line_chords', {
-          children: this.chords.map(chord => chord.toDOM()),
+          children: this.chords.map(chord => chord.toDOM(key)),
         }),
         createEl('div.cm7_line_lyrics', {
           children: this.text.split(/[()]/g).map((t, i) => {
@@ -18,6 +20,16 @@ export default class Line {
           }),
         }),
       ],
+    });
+  }
+
+  static fromAST({ children: [
+    chordLineNode,
+    { text },
+  ]}) {
+    return new Line({
+      chords: chordLineNode.children.map(Chord.fromAST),
+      text,
     });
   }
 }

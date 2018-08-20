@@ -24,7 +24,7 @@ export default ({ el, src, cssClasses }) => {
   };
 
   return Cm7({
-    el: document.querySelector(el),
+    el,
     cssClasses,
     ast,
   });

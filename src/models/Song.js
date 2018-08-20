@@ -1,5 +1,6 @@
 import Chord from './Chord';
 import Line from './Line';
+import createEl from '../helpers/createEl';
 
 export default class Song {
   constructor({ configs, sections }) {
@@ -7,11 +8,13 @@ export default class Song {
   }
 
   toDOM() {
-    return '<span class="cm7_song">' +
-      this.sections.map(
-        lines => lines.map(line => line.toDOM())
-      ).join('\n') +
-    '</span>';
+    return createEl('div.cm7_song', {
+      children: this.sections.map(
+        lines => createEl('div.cm7_section', {
+          children: lines.map(line => line.toDOM()),
+        }),
+      ),
+    });
   }
 
   static fromAST(ast) {

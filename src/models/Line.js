@@ -6,26 +6,18 @@ export default class Line {
   }
 
   toDOM() {
-    return createEl('div', {
-      classes: ['cm7_line'],
+    return createEl('div.cm7_line', {
       children: [
-        createEl('div', {
-          classes: ['cm7_line_chords'],
+        createEl('div.cm7_line_chords', {
           children: this.chords.map(chord => chord.toDOM()),
         }),
-        createEl('div', {
+        createEl('div.cm7_line_lyrics', {
           children: this.text.split(/[()]/g).map((t, i) => {
             if (i % 2 === 0) return t;
-            return createEl('span', {
-              class: ['cm7_line_lyrics-beat'],
-              children: [t],
-            });
+            return createEl('span.cm7_line_lyrics-beat', { children: [t] });
           }),
         }),
       ],
     });
-    const lyricsLine = this.text
-      .replace(/\(/g, '<span class="cm7_beat">')
-      .replace(/\)/g, '</span>');
   }
 }

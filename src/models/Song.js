@@ -1,9 +1,17 @@
 import Chord from './Chord';
+import Line from './Line';
 
 export default class Song {
-  constructor({ configs, song }) {
-    this.configs = configs;
-    this.song = song;
+  constructor({ configs, sections }) {
+    Object.assign(this, { configs, sections });
+  }
+
+  toDOM() {
+    return '<span class="cm7_song">' +
+      this.sections.map(
+        lines => lines.map(line => line.toDOM())
+      ).join('\n') +
+    '</span>';
   }
 
   static fromAST(ast) {
@@ -33,22 +41,11 @@ export default class Song {
 
     const parseLineNode = ({ children: [
       chordLineNode,
-      lyricsLineNode,
-    ]}) => ({
+      { text },
+    ]}) => new Line({
       chords: chordLineNode.children.map(parseChordNode),
-      chordPositions: getChordPositions(lyricsLineNode.text),
-      line: lyricsLineNode.text.replace(/[()]/g, ''),
+      text,
     });
-
-    const getChordPositions = (line) => {
-      let counter = 0;
-      return line.replace(/\)/g, '')
-        .split(/\(/g).slice(0, -1)
-        .map(({ length }) => {
-          counter += length;
-          return counter;
-        });
-    };
 
     const parseChordNode = (chordNode) => {
       const root = findFirstChildOfType(chordNode, 'relative_note').text;
@@ -78,7 +75,7 @@ export default class Song {
 
     return new Song({
       configs: parseConfigsNode(findFirstChildOfType(ast, 'configs')),
-      song: parseSongNode(findFirstChildOfType(ast, 'song')),
+      sections: parseSongNode(findFirstChildOfType(ast, 'song')),
     });
   }
 }

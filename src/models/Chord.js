@@ -1,3 +1,5 @@
+import createEl from '../helpers/createEl';
+
 const isValidRelativeNote = n => /^[1-7](#|b)?$/.test(n);
 const isValidQuality = q => ['mM7', 'm7b5', 'm7', 'm', 'sus2', 'sus4', '7', 'M7', '6', '9', 'aug7', 'aug', 'dim7', 'dim'].includes(q);
 const isValidAddition = a => /^add(#|b)?(2|4|6|9|11|13)/.test(a);
@@ -23,5 +25,16 @@ export default class Chord {
     }
 
     Object.assign(this, { root, quality, additions, base });
+  }
+
+  display() {
+    return 'C';
+  }
+
+  toDOM() {
+    return createEl('span', {
+      classes: ['cm7_chord'],
+      children: [this.display()],
+    });
   }
 }

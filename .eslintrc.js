@@ -1,12 +1,17 @@
 module.exports = {
-  "parserOptions": {
-    "sourceType": "module",
+  parserOptions: {
+    sourceType: 'module',
   },
-  "env": {
-    "es6": true,
-    "jest": true,
-    "browser": true,
-    "node": true,
+  env: {
+    'es6': true,
+    'jest': true,
+    'browser': true,
+    'node': true,
   },
-  "extends": "@ycm.jason/eslint-config"
+  globals: {
+    page: true,
+    browser: true,
+    jestPuppeteer: true,
+  },
+  extends: '@ycm.jason/eslint-config'
 };

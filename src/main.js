@@ -18,8 +18,13 @@ export default ({ el, src, cssClasses }) => {
 
   cssClasses = {
     cm7: 'cm7',
-    chord: 'cm7-chord',
-    lyricsBeat: 'cm7-lyrics-beat',
+    song: 'cm7_song',
+    section: 'cm7_section',
+    chord: 'cm7_chord',
+    line: 'cm7_line',
+    chords: 'cm7_line_chords',
+    lyrics: 'cm7_line_lyrics',
+    lyricsBeat: 'cm7_line_lyrics-beat',
     ...cssClasses,
   };
 

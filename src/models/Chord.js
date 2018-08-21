@@ -108,8 +108,8 @@ export default class Chord {
       baseDisplay;
   }
 
-  toDOM(key) {
-    return createEl('span.cm7_chord', {
+  toDOM({ cssClasses, key }) {
+    return createEl(`span.${cssClasses.chord}`, {
       children: [this.display(key)],
     });
   }

@@ -8,5 +8,5 @@ export default ({ el, cssClasses, ast }) => {
   // remove all children in $el
   while ($el.firstChild) $el.removeChild($el.firstChild);
 
-  $el.appendChild(song.toDOM());
+  $el.appendChild(song.toDOM({ cssClasses }));
 };

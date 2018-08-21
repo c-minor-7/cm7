@@ -9,11 +9,12 @@ export default class Song {
     Object.assign(this, { configs, sections });
   }
 
-  toDOM() {
-    return createEl('div.cm7_song', {
+  toDOM({ cssClasses }) {
+    const { key } = this.configs;
+    return createEl(`div.${cssClasses.song}`, {
       children: this.sections.map(
-        lines => createEl('div.cm7_section', {
-          children: lines.map(line => line.toDOM(this.configs.key)),
+        lines => createEl(`div.${cssClasses.section}`, {
+          children: lines.map(line => line.toDOM({ key, cssClasses })),
         }),
       ),
     });

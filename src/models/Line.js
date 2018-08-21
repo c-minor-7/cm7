@@ -7,16 +7,16 @@ export default class Line {
     Object.assign(this, { chords, text });
   }
 
-  toDOM(key) {
-    return createEl('div.cm7_line', {
+  toDOM({ cssClasses, key }) {
+    return createEl(`div.${cssClasses.line}`, {
       children: [
-        createEl('div.cm7_line_chords', {
-          children: this.chords.map(chord => chord.toDOM(key)),
+        createEl(`div.${cssClasses.chords}`, {
+          children: this.chords.map(chord => chord.toDOM({ cssClasses, key })),
         }),
-        createEl('div.cm7_line_lyrics', {
+        createEl(`div.${cssClasses.lyrics}`, {
           children: this.text.split(/[()]/g).map((t, i) => {
             if (i % 2 === 0) return t;
-            return createEl('span.cm7_line_lyrics-beat', { children: [t] });
+            return createEl(`span.${cssClasses.lyricsBeat}`, { children: [t] });
           }),
         }),
       ],

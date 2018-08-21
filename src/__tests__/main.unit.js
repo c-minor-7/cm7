@@ -21,7 +21,7 @@ describe('cm7', () => {
     document.body.innerHTML = '';
   });
 
-  it('should replace the content of the target element', async () => {
+  it('should replace the content of the target element that match snapshot', async () => {
     const id = 'my-chord-displayer';
     const content = 'original content';
 
@@ -32,6 +32,8 @@ describe('cm7', () => {
       src,
     });
 
-    expect(document.querySelector(`#${id}`).innerHTML).not.toBe(content);
+    const innerHTML = document.querySelector(`#${id}`).innerHTML;
+    expect(innerHTML).not.toBe(content);
+    expect(innerHTML).toMatchSnapshot();
   });
 });

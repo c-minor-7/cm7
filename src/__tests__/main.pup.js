@@ -1,5 +1,6 @@
 import { rollup } from 'rollup';
-import rollupConfig from '../../rollup.config.js';
+import rollupConfig from '../../rollup.config';
+import zip from '../helpers/zip';
 
 describe('puppeteer', () => {
   const src = `key=C
@@ -58,19 +59,5 @@ describe('puppeteer', () => {
     })).toBe(await page.evaluate(() => {
       return document.querySelectorAll('.cm7_line_lyrics-beat').length;
     }));
-
-    expect(await page.evaluate(() => {
-      const zip = ([x, ...xs], [y, ...ys]) => {
-        if (!x || !y) return [];
-        return [[x, y], ...zip(xs, ys)];
-      };
-
-      const chords = document.querySelectorAll('.cm7_chord');
-      const lyricsBeats = Array.from(document.querySelectorAll('.cm7_line_lyrics-beat'));
-
-      return zip(chords, lyricsBeats).map(([chord, lyricsBeat]) => {
-        return chord.getBoundingClientRect().left === lyricsBeat.getBoundingClientRect().left;
-      });
-    })).toBe(true);
   });
 });

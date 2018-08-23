@@ -6,20 +6,30 @@ const parseSelector = (selector) => ({
 
 export default function createEl(selector, {
   attrs = {},
+  styles = {},
   children = [],
 } = {}) {
-  const { id, tagName, classes } = parseSelector(selector);
+  const { tagName, id, classes } = parseSelector(selector);
   const el = document.createElement(tagName);
 
+  // populate the id
   if (id) el.id = id;
 
-  Object.entries(attrs).forEach(([key, value]) => {
-    if (value === true) value = '';
-    el.setAttribute(key, value);
-  });
-
+  // populate the class
   el.className = classes.join(' ');
 
+  // populate attribute
+  for (let [key, value] of Object.entries(attrs)) {
+    if (value === true) value = '';
+    el.setAttribute(key, value);
+  }
+
+  // populate inline styles
+  for (const [prop, value] of Object.entries(styles)) {
+    el.style[prop] = value;
+  }
+
+  // append children
   children.forEach(child => {
     if (typeof child === 'string') child = document.createTextNode(child);
     el.appendChild(child);

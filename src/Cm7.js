@@ -1,4 +1,6 @@
 import Song from './models/Song';
+import createEl from './helpers/createEl';
+import zip from './helpers/zip';
 
 export default ({ el, cssClasses, ast }) => {
   // pre: all arguments are checked!
@@ -8,5 +10,16 @@ export default ({ el, cssClasses, ast }) => {
   // remove all children in $el
   while ($el.firstChild) $el.removeChild($el.firstChild);
 
-  $el.appendChild(song.toDOM({ cssClasses }));
+  $el.appendChild(createEl(`div.${cssClasses.cm7}`, {
+    children: [song.toDOM({ cssClasses })],
+  }));
+
+
+  const chords = $el.querySelectorAll(`.${cssClasses.chord}`);
+  const beats = $el.querySelectorAll(`.${cssClasses.lyricsBeat}`);
+
+  for (const [chord, beat] of zip(chords, beats)) {
+    chord.style.position = 'relative';
+    chord.style.left = beat.offsetLeft - chord.offsetLeft;
+  }
 };

@@ -1,13 +1,11 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import builtins from 'rollup-plugin-node-builtins';
 
 const base_config = {
   input: 'src/main.js',
   plugins: [
     resolve(),
     commonjs(),
-    builtins(),
   ],
 };
 

@@ -6,18 +6,18 @@ describe('puppeteer', () => {
   const src = `key=C
 
 1 1M7/3
-(L)ondon bridge is (f)alling down
+(London) bridge is (falling) down
 2m 4madd4/7b
-(F)alling (d)own
+(Falling) (down)
 1
-(F)alling down
+(Falling) down
 
 1
-(L)ondon bridge is falling down
+(London) bridge is falling down
 2m
-(F)alling down
+(Falling) down
 1
-(F)alling down`;
+(Falling) down`;
   let cm7Src;
   beforeAll(async () => {
     const bundle = await rollup(rollupConfig[0]);
@@ -47,6 +47,7 @@ describe('puppeteer', () => {
   });
 
   it('should put chords in place', async () => {
+    jestPuppeteer.debug();
     await page.evaluate(src => {
       Cm7({ // eslint-disable-line no-undef
         el: '#display',
@@ -58,6 +59,12 @@ describe('puppeteer', () => {
       return document.querySelectorAll('.cm7_chord').length;
     })).toBe(await page.evaluate(() => {
       return document.querySelectorAll('.cm7_line_lyrics-beat').length;
+    }));
+
+    expect(await page.evaluate(() => {
+      return document.querySelectorAll('.cm7_chord').offsetLeft;
+    })).toBe(await page.evaluate(() => {
+      return document.querySelectorAll('.cm7_line_lyrics-beat').offsetLeft;
     }));
   });
 });

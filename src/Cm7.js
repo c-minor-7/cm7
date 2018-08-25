@@ -14,12 +14,22 @@ export default ({ el, cssClasses, ast }) => {
     children: [song.toDOM({ cssClasses })],
   }));
 
+  const $lines = $el.querySelectorAll(`.${cssClasses.line}`);
 
-  const chords = $el.querySelectorAll(`.${cssClasses.chord}`);
-  const beats = $el.querySelectorAll(`.${cssClasses.lyricsBeat}`);
+  for (const $line of $lines) {
+    const $chords = $line.querySelectorAll(`.${cssClasses.chord}`);
+    const $beats = $line.querySelectorAll(`.${cssClasses.lyricsBeat}`);
 
-  for (const [chord, beat] of zip(chords, beats)) {
-    chord.style.position = 'relative';
-    chord.style.left = beat.offsetLeft - chord.offsetLeft;
+    for (const [$chord, $beat] of zip($chords, $beats)) {
+      Object.assign($chord.style, {
+        position: 'relative',
+        left: $beat.offsetLeft - $chord.offsetLeft,
+      });
+
+      Object.assign($beat.style, {
+        display: 'inline-block',
+        minWidth: $chord.offsetWidth + 'px',
+      });
+    }
   }
 };

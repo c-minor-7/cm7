@@ -22,6 +22,7 @@ describe.only('createEl', () => {
   });
 
   describe('options', () => {
+    /*
     it('should set the attributes based on opts.attrs', () => {
       const attrs = {
         yo: 'hi',
@@ -33,6 +34,7 @@ describe.only('createEl', () => {
       expect(el.getAttribute('yo')).toBe('hi');
       expect(el.getAttribute('mo')).toBe('');
     });
+    */
 
     it('should appendChild based on opts.children', () => {
       const child1 = createEl('div');

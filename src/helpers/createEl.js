@@ -5,8 +5,6 @@ const parseSelector = (selector) => ({
 });
 
 export default function createEl(selector, {
-  attrs = {},
-  styles = {},
   children = [],
 } = {}) {
   const { tagName, id, classes } = parseSelector(selector);
@@ -17,17 +15,6 @@ export default function createEl(selector, {
 
   // populate the class
   el.className = classes.join(' ');
-
-  // populate attribute
-  for (let [key, value] of Object.entries(attrs)) {
-    if (value === true) value = '';
-    el.setAttribute(key, value);
-  }
-
-  // populate inline styles
-  for (const [prop, value] of Object.entries(styles)) {
-    el.style[prop] = value;
-  }
 
   // append children
   children.forEach(child => {

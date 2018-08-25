@@ -1,5 +1,6 @@
 import parseCm7 from 'cm7-lang-parser';
 import Song from '../Song';
+import pretty from 'pretty';
 
 describe('cm7', () => {
   const src = `key=C
@@ -25,6 +26,7 @@ describe('cm7', () => {
         cm7: 'cm7',
         song: 'cm7_song',
         section: 'cm7_section',
+        sectionLabel: 'cm7_section_label',
         chord: 'cm7_chord',
         line: 'cm7_line',
         chords: 'cm7_line_chords',
@@ -33,6 +35,6 @@ describe('cm7', () => {
       },
     });
     const innerHTML = songDOM.innerHTML;
-    expect(innerHTML).toMatchSnapshot();
+    expect(pretty(innerHTML)).toMatchSnapshot();
   });
 });

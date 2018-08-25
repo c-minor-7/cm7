@@ -1,3 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`cm7 should generate html that matches snapshot 1`] = `"<div class=\\"cm7_section\\"><div class=\\"cm7_line\\"><div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span><span class=\\"cm7_chord\\">CM7/E</span></div><div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">L</span>ondon bridge is <span class=\\"cm7_line_lyrics-beat\\">f</span>alling down</div></div><div class=\\"cm7_line\\"><div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Dm</span><span class=\\"cm7_chord\\">Fmadd4/Bb</span></div><div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling <span class=\\"cm7_line_lyrics-beat\\">d</span>own</div></div><div class=\\"cm7_line\\"><div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div><div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling down</div></div></div><div class=\\"cm7_section\\"><div class=\\"cm7_line\\"><div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div><div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">L</span>ondon bridge is falling down</div></div><div class=\\"cm7_line\\"><div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Dm</span></div><div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling down</div></div><div class=\\"cm7_line\\"><div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div><div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling down</div></div></div>"`;
+exports[`cm7 should generate html that matches snapshot 1`] = `
+"<div class=\\"cm7_section\\">
+  <div class=\\"cm7_section_label\\">verse</div>
+  <div class=\\"cm7_line\\">
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span><span class=\\"cm7_chord\\">CM7/E</span></div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">L</span>ondon bridge is <span class=\\"cm7_line_lyrics-beat\\">f</span>alling down</div>
+  </div>
+  <div class=\\"cm7_line\\">
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Dm</span><span class=\\"cm7_chord\\">Fmadd4/Bb</span></div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling <span class=\\"cm7_line_lyrics-beat\\">d</span>own</div>
+  </div>
+  <div class=\\"cm7_line\\">
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling down</div>
+  </div>
+</div>
+<div class=\\"cm7_section\\">
+  <div class=\\"cm7_section_label\\"></div>
+  <div class=\\"cm7_line\\">
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">L</span>ondon bridge is falling down</div>
+  </div>
+  <div class=\\"cm7_line\\">
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Dm</span></div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling down</div>
+  </div>
+  <div class=\\"cm7_line\\">
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">F</span>alling down</div>
+  </div>
+</div>"
+`;

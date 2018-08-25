@@ -10,9 +10,12 @@ export default class Section {
 
   toDOM({ key, cssClasses }) {
     return createEl(`div.${cssClasses.section}`, {
-      children: this.lines.map(
-        line => line.toDOM({ key, cssClasses }),
-      ),
+      children: [
+        createEl(`div.${cssClasses.sectionLabel}`, { children: [this.label] }),
+        ...this.lines.map(
+          line => line.toDOM({ key, cssClasses }),
+        ),
+      ],
     });
   }
 
@@ -21,7 +24,7 @@ export default class Section {
     const lines = findChildrenOfType(sectionNode, 'line').map(Line.fromAST);
 
     return new Section({
-      label: sectionLabel? sectionLabel.text: '',
+      label: sectionLabel? sectionLabel.text.trim(): '',
       lines,
     });
   }

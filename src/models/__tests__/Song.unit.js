@@ -4,6 +4,7 @@ import Song from '../Song';
 describe('cm7', () => {
   const src = `key=C
 
+:: verse ::
 1 1M7/3
 (L)ondon bridge is (f)alling down
 2m 4madd4/7b

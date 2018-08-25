@@ -16,7 +16,7 @@ export default class Line {
         createEl(`div.${cssClasses.lyrics}`, {
           children: this.text.split(/[()]/g).map((t, i) => {
             if (i % 2 === 0) return t;
-            return createEl(`span.${cssClasses.lyricsBeat}`, { children: [t || ' '] });
+            return createEl(`span.${cssClasses.lyricsBeat}`, { children: [t || '&nbps;'] });
           }),
         }),
       ],

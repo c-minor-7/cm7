@@ -1,8 +1,8 @@
-import Chord from './Chord';
+import Section from './Section';
 import Line from './Line';
 import createEl from '../helpers/createEl';
 
-import { findFirstChildOfType } from '../helpers/AST';
+import { findFirstChildOfType, findChildrenOfType } from '../helpers/AST';
 
 export default class Song {
   constructor({ configs, sections }) {
@@ -13,9 +13,7 @@ export default class Song {
     const { key } = this.configs;
     return createEl(`div.${cssClasses.song}`, {
       children: this.sections.map(
-        lines => createEl(`div.${cssClasses.section}`, {
-          children: lines.map(line => line.toDOM({ key, cssClasses })),
-        }),
+        section => section.toDOM({ key, cssClasses })
       ),
     });
   }
@@ -29,9 +27,7 @@ export default class Song {
         [key]: value,
       }), {});
 
-    const sections = findFirstChildOfType(ast, 'song').children.map(
-      sectionNode => sectionNode.children.map(Line.fromAST)
-    );
+    const sections = findFirstChildOfType(ast, 'song').children.map(Section.fromAST);
 
     return new Song({ configs, sections });
   }

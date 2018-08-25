@@ -1,5 +1,7 @@
 module.exports = {
   preset: 'jest-puppeteer',
+  coverageDirectory: './coverage/',
+  collectCoverage: true,
   projects: [
     {
       displayName: 'unit tests',

@@ -23,7 +23,7 @@ export default ({ el, cssClasses, ast }) => {
     for (const [$chord, $beat] of zip($chords, $beats)) {
       Object.assign($chord.style, {
         position: 'relative',
-        left: $beat.offsetLeft - $chord.offsetLeft,
+        left: ($beat.offsetLeft - $chord.offsetLeft) + 'px',
       });
 
       Object.assign($beat.style, {

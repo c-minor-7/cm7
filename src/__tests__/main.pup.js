@@ -47,7 +47,6 @@ describe('puppeteer', () => {
   });
 
   it('should put chords in place', async () => {
-    jestPuppeteer.debug();
     await page.evaluate(src => {
       Cm7({ // eslint-disable-line no-undef
         el: '#display',

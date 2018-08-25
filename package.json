@@ -1,6 +1,6 @@
 {
   "name": "cm7",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/Cm7.umd.js",
   "files": [

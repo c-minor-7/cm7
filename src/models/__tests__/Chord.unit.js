@@ -34,17 +34,19 @@ describe('Chord', () => {
         root: '2#',
       });
 
+      expect(chord.display('C')).toEqual('D#');
       expect(chord.display('Ab')).toEqual('B');
       expect(chord.display('G#')).toEqual('B');
     });
 
     it('should be able to display simple b major', () => {
       const chord = new Chord({
-        root: '7b',
+        root: '5b',
       });
 
-      expect(chord.display('Gb')).toEqual('E');
-      expect(chord.display('F#')).toEqual('E');
+      expect(chord.display('F')).toEqual('B');
+      expect(chord.display('Gb')).toEqual('C');
+      expect(chord.display('F#')).toEqual('C');
     });
 
     it('adding quality to chord', () => {

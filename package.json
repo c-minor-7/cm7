@@ -10,7 +10,9 @@
     "clean": "/bin/rm -rf dist",
     "build": "npm run clean && rollup -c",
     "test": "jest",
-    "coverage": "codecov"
+    "coverage": "codecov",
+    "preversion": " npm run test && npm run build",
+    "version": "git add -A"
   },
   "keywords": [],
   "author": "Jason Yu <me@ycmjason.com>",

@@ -6,6 +6,7 @@ node_js:
   - "lts/*"
 
 script:
+  - npm run build
   - npm test
 
 after_success:

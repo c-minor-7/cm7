@@ -1,40 +1,25 @@
-import parseCm7 from 'cm7-lang-parser';
-import Song from '../Song';
+import { readFileSync, readdirSync } from 'fs';
+import { join } from 'path';
 import pretty from 'pretty';
 
+import parseCm7 from 'cm7-lang-parser';
+import Song from '../Song';
+import cssClasses from '../../defaultCssClasses';
+
 describe('cm7', () => {
-  const src = `key=C
+  const cm7sDir = join(__dirname, './cm7s');
 
-:: verse ::
-1 1M7/3
-(L)ondon bridge is (f)alling down
-2m 4madd4/7b
-(F)alling (d)own
-1
-(F)alling down
+  for (const filename of readdirSync(cm7sDir)) {
+    if (filename[0] === '.') continue;
 
-1
-(L)ondon bridge is falling down
-2m
-(F)alling down
-1
-(F)alling down`;
+    describe(filename, () => {
+      it('should generate html that matches snapshot', async () => {
+        const src = readFileSync(join(cm7sDir, 'here-we-are.cm7'), 'utf8');
 
-  it('should generate html that matches snapshot', async () => {
-    const songDOM = Song.fromAST(parseCm7(src)).toDOM({
-      cssClasses: {
-        cm7: 'cm7',
-        song: 'cm7_song',
-        section: 'cm7_section',
-        sectionLabel: 'cm7_section_label',
-        chord: 'cm7_chord',
-        line: 'cm7_line',
-        chords: 'cm7_line_chords',
-        lyrics: 'cm7_line_lyrics',
-        lyricsBeat: 'cm7_line_lyrics-beat',
-      },
+        const songDOM = Song.fromAST(parseCm7(src)).toDOM({ cssClasses });
+        const innerHTML = songDOM.innerHTML;
+        expect(pretty(innerHTML)).toMatchSnapshot();
+      });
     });
-    const innerHTML = songDOM.innerHTML;
-    expect(pretty(innerHTML)).toMatchSnapshot();
-  });
+  }
 });

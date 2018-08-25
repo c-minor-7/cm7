@@ -2,34 +2,44 @@ import Chord from './Chord';
 
 import createEl from '../helpers/createEl';
 
+import { findFirstChildOfType, findChildrenOfType } from '../helpers/AST';
+
 export default class Line {
-  constructor({ chords, text }) {
-    Object.assign(this, { chords, text });
+  constructor({ chords, lyricsChunks }) {
+    Object.assign(this, { chords, lyricsChunks });
   }
 
   toDOM({ cssClasses, key }) {
-    return createEl(`div.${cssClasses.line}`, {
-      children: [
-        createEl(`div.${cssClasses.chords}`, {
-          children: this.chords.map(chord => chord.toDOM({ cssClasses, key })),
-        }),
-        createEl(`div.${cssClasses.lyrics}`, {
-          children: this.text.split(/[()]/g).map((t, i) => {
+    const children = [];
+    if (this.chords.length > 0) {
+      children.push(createEl(`div.${cssClasses.chordLine}`, {
+        children: this.chords.map(chord => chord.toDOM({ cssClasses, key })),
+      }));
+    }
+
+    if (this.lyricsChunks.length > 0) {
+      children.push(
+        createEl(`div.${cssClasses.lyricLine}`, {
+          children: this.lyricsChunks.map((t, i) => {
             if (i % 2 === 0) return t;
-            return createEl(`span.${cssClasses.lyricsBeat}`, { children: [t || '&nbps;'] });
+            return createEl(`span.${cssClasses.lyricsBeat}`, {
+              children: [t || '&nbps;'],
+            });
           }),
-        }),
-      ],
-    });
+        })
+      );
+    }
+
+    return createEl(`div.${cssClasses.line}`, { children });
   }
 
-  static fromAST({ children: [
-    chordLineNode,
-    { text },
-  ]}) {
+  static fromAST(lineNode) {
+    const chordLineNode = findFirstChildOfType(lineNode, 'chord_line');
+    const lyricsLineNode = findFirstChildOfType(lineNode, 'lyrics_line');
+
     return new Line({
-      chords: chordLineNode.children.map(Chord.fromAST),
-      text,
+      chords: chordLineNode? chordLineNode.children.map(Chord.fromAST): [],
+      lyricsChunks: lyricsLineNode? lyricsLineNode.children.map(({ text }) => text): [],
     });
   }
 }

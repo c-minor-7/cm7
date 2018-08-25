@@ -1,8 +1,7 @@
 import Section from './Section';
-import Line from './Line';
 import createEl from '../helpers/createEl';
 
-import { findFirstChildOfType, findChildrenOfType } from '../helpers/AST';
+import { findFirstChildOfType } from '../helpers/AST';
 
 export default class Song {
   constructor({ configs, sections }) {
@@ -24,7 +23,7 @@ export default class Song {
       .map(config => config.split('='))
       .reduce((acc, [key, value]) => ({
         ...acc,
-        [key]: value,
+        [key.trim()]: value.trim(),
       }), {});
 
     const sections = findFirstChildOfType(ast, 'song').children.map(Section.fromAST);

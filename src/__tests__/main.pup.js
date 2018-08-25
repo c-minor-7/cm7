@@ -1,6 +1,6 @@
 import { rollup } from 'rollup';
 import rollupConfig from '../../rollup.config';
-import zip from '../helpers/zip';
+import cssClasses from '../defaultCssClasses';
 
 describe('puppeteer', () => {
   const src = `key=C
@@ -36,12 +36,14 @@ describe('puppeteer', () => {
   });
 
   it('should generate something in the element given', async () => {
-    await page.evaluate(src => {
+    await page.evaluate((src, cssClasses) => {
       Cm7({ // eslint-disable-line no-undef
         el: '#display',
         src,
       });
-    }, src);
+
+      window.cssClasses = cssClasses;
+    }, src, cssClasses);
 
     expect(await page.evaluate(() => document.querySelector('#display').innerText)).not.toBe('');
   });
@@ -55,15 +57,15 @@ describe('puppeteer', () => {
     }, src);
 
     expect(await page.evaluate(() => {
-      return document.querySelectorAll('.cm7_chord').length;
+      return document.querySelectorAll(window.cssClasses.chord).length;
     })).toBe(await page.evaluate(() => {
-      return document.querySelectorAll('.cm7_line_lyrics-beat').length;
+      return document.querySelectorAll(window.cssClasses.lyricsBeat).length;
     }));
 
     expect(await page.evaluate(() => {
-      return document.querySelectorAll('.cm7_chord').offsetLeft;
+      return document.querySelectorAll(window.cssClasses.chord).offsetLeft;
     })).toBe(await page.evaluate(() => {
-      return document.querySelectorAll('.cm7_line_lyrics-beat').offsetLeft;
+      return document.querySelectorAll(window.cssClasses.lyricsBeat).offsetLeft;
     }));
   });
 });

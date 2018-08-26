@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="UTF-8">
-    <title>Cm7 Examples: jimjim</title>
-    <style>
-      .cm7_line_lyrics-beat {
-        margin-right: 3px;
-      }
-
-      .cm7_chord {
-        margin-right: 3px;
-      }
-
-      .cm7_section {
-        margin-bottom: 1rem; 
-      }
-    </style>
-  </head>
-  <body>
-    <div id="chords"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/cm7/dist/Cm7.umd.js"></script>
-    <script>
-      Cm7({
-  el: '#chords',
-  src: `key=Eb
+/* eslint-disable */
+const songs = {
+  'jimjim': `key=Eb
 
 1 6m
 ()在夜晚 說(早)晨
@@ -61,7 +37,16 @@
 ()如留下語(錄)誰來(看)
 7b 5/7
 懷念(只)可鋪滿被(單)`,
-})
-    </script>
-  </body>
-</html>
+};
+
+new Vue({
+  el: '#app',
+  data: () => ({
+    src: ''
+  }),
+  computed: {
+    song() {
+      return Cm7({ src: this.src });
+    }
+  },
+});

@@ -1,26 +1,18 @@
-<html>
-  <head></head>
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Cm7 Editor</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
   <body>
-    <main data-marked>
-      # Cm7
-      
-      Cm7 is cool.
-
-      Check out this [example](./jimjim.html).
-
+    <main id="app">
+      <textarea class="cm7Src" v-model="src"></textarea>
+      <div class="song" v-html="song"></div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-      for (const el of document.querySelectorAll('[data-marked]')) {
-        let lines = el.innerHTML.split('\n');
-        if (lines.length > 1) {
-          lines = lines.slice(lines.findIndex(line => line.trim() !== ''));
-          const firstLineIndentation = lines[0].match(/^\s*/)[0];
-          lines = lines.map(line => line.slice(firstLineIndentation.length));
-        }
-        el.innerHTML = marked(lines.join('\n'));
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cm7/dist/Cm7.umd.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

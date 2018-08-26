@@ -1,0 +1,36 @@
+#app {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cm7Src {
+  white-space: pre;
+  background: #e4e4e4;
+  font-family: monospace;
+  padding: 1rem;
+  resize: none;
+  height: 100vh;
+  width: 50%;
+}
+
+.song {
+  padding: 1rem;
+  width: 50%;
+}
+
+.cm7_line_lyrics-beat {
+  margin-right: 3px;
+}
+
+.cm7_chord {
+  margin-right: 3px;
+}
+
+.cm7_section {
+  margin-bottom: 1rem; 
+}

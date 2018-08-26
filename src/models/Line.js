@@ -2,11 +2,11 @@ import Chord from './Chord';
 
 import createEl from '../helpers/createEl';
 
-import { findFirstChildOfType, findChildrenOfType } from '../helpers/AST';
+import { findFirstChildOfType } from '../helpers/AST';
 
 export default class Line {
-  constructor({ chords, lyricsChunks }) {
-    Object.assign(this, { chords, lyricsChunks });
+  constructor({ chords, lyrics }) {
+    Object.assign(this, { chords, lyrics });
   }
 
   toDOM({ cssClasses, key }) {
@@ -17,16 +17,18 @@ export default class Line {
       }));
     }
 
-    if (this.lyricsChunks.length > 0) {
-      children.push(
-        createEl(`div.${cssClasses.lyricLine}`, {
-          children: this.lyricsChunks.map((t, i) => {
-            if (i % 2 === 0) return t;
+    if (this.lyrics.length > 0) {
+      children.push(createEl(`div.${cssClasses.lyricLine}`, {
+        children: this.lyrics.map(({ type, text }) => {
+          if (type === 'lyrics_beat') {
             return createEl(`span.${cssClasses.lyricsBeat}`, {
-              children: [t || '&nbps;'],
+              children: [text.slice(1, -1)],
             });
-          }),
-        })
+          }
+
+          return text;
+        }),
+      })
       );
     }
 
@@ -35,11 +37,14 @@ export default class Line {
 
   static fromAST(lineNode) {
     const chordLineNode = findFirstChildOfType(lineNode, 'chord_line');
-    const lyricsLineNode = findFirstChildOfType(lineNode, 'lyrics_line');
+    const lyricLineNode = findFirstChildOfType(lineNode, 'lyrics_line');
 
     return new Line({
       chords: chordLineNode? chordLineNode.children.map(Chord.fromAST): [],
-      lyricsChunks: lyricsLineNode? lyricsLineNode.children.map(({ text }) => text): [],
+      lyrics: lyricLineNode? lyricLineNode.children.map(({ type, text }) => ({
+        type,
+        text,
+      })): [],
     });
   }
 }

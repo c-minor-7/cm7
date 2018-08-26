@@ -57,9 +57,13 @@ describe('puppeteer', () => {
     }, src);
 
     expect(await page.evaluate(() => {
-      return document.querySelectorAll(window.cssClasses.chord).length;
+      return document.querySelectorAll(`.${window.cssClasses.chord}`).length;
+    })).toBeGreaterThan(0);
+
+    expect(await page.evaluate(() => {
+      return document.querySelectorAll(`.${window.cssClasses.chord}`).length;
     })).toBe(await page.evaluate(() => {
-      return document.querySelectorAll(window.cssClasses.lyricsBeat).length;
+      return document.querySelectorAll(`.${window.cssClasses.lyricsBeat}`).length;
     }));
 
     expect(await page.evaluate(() => {

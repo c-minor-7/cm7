@@ -3,9 +3,9 @@ import Cm7 from './Cm7.js';
 import defaultCssClasses from './defaultCssClasses';
 
 export default ({ el, src, cssClasses }) => {
-  if (!el) throw Error('Cm7: `el` is not defined.');
   if (!src) throw Error('Cm7: `src` is not defined.');
-  if (typeof el !== 'string') throw Error('Cm7: `el` should be a string.');
+  if (el && typeof el !== 'string') throw Error('Cm7: `el` should be a string.');
+  if (el.trim() === '') throw Error('Cm7: `el` is an empty string.');
   if (typeof src !== 'string') throw Error('Cm7: `src` should be a string.');
 
   const ast = parseCm7(src);
@@ -17,12 +17,15 @@ export default ({ el, src, cssClasses }) => {
     throw Error('Cm7: `src` is not a valid cm7 source. See the above errors.');
   }
 
-  return Cm7({
-    el,
+  const cm7HTML = Cm7({
     cssClasses: {
       ...defaultCssClasses,
       ...cssClasses,
     },
     ast,
   });
+
+  if (el) document.querySelector(el).innerHTML = cm7HTML;
+
+  return cm7HTML;
 };

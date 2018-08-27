@@ -108,17 +108,10 @@ new Vue({
     src: templates[0].src,
     error: '',
   }),
+  mounted() {
+    this.renderCm7();
+  },
   computed: {
-    song() {
-        this.error = '';
-      try {
-        return Cm7({ src: this.src });
-      } catch (e) {
-        if (!e.message.includes('Cm7')) throw e;
-        this.error = e.message;
-        return '';
-      }
-    },
     templateId: {
       set(to) {
         if (to === this.$data._templateId) return;
@@ -130,10 +123,23 @@ new Vue({
 
         this.$data._templateId = to;
         this.src = this.templates[to].src;
+        this.renderCm7();
       },
       get() {
         return this.$data._templateId;
       },
     },
+  },
+  methods: {
+    renderCm7() {
+      this.error = '';
+      try {
+        return Cm7({ el: this.$refs.cm7Output, src: this.src });
+      } catch (e) {
+        if (!e.message.includes('Cm7')) throw e;
+        this.error = e.message;
+        return '';
+      }
+    }
   },
 });

@@ -5,7 +5,6 @@ import defaultCssClasses from './defaultCssClasses';
 
 export default ({ el, src, cssClasses }) => {
   if (typeof src !== 'string') throw Error('Cm7: `src` should be a string.');
-  if (typeof src !== 'string') throw Error('Cm7: `src` should be a string.');
 
   const ast = parseCm7(src);
 

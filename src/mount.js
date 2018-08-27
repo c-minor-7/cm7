@@ -1,7 +1,6 @@
 import zip from './helpers/zip';
 
 export default ({ el, cm7HTML, cssClasses }) => {
-  if (el && typeof el !== 'string') throw Error('Cm7: `el` should be a string.');
   if (typeof el === 'string' && el.trim().length <= 0) throw Error('Cm7: `el` is empty.');
 
   const $el = typeof el === 'string'? document.querySelector(el): el;

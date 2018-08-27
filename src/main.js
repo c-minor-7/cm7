@@ -1,5 +1,6 @@
 import parseCm7 from 'cm7-lang-parser';
-import Cm7 from './Cm7.js';
+import render from './render';
+import mount from './mount';
 import defaultCssClasses from './defaultCssClasses';
 
 export default ({ el, src, cssClasses }) => {
@@ -17,15 +18,16 @@ export default ({ el, src, cssClasses }) => {
     throw Error('Cm7: `src` is not a valid cm7 source. See the above errors.');
   }
 
-  const cm7HTML = Cm7({
-    cssClasses: {
-      ...defaultCssClasses,
-      ...cssClasses,
-    },
-    ast,
-  });
+  cssClasses = {
+    ...defaultCssClasses,
+    ...cssClasses,
+  };
 
-  if (el) document.querySelector(el).innerHTML = cm7HTML;
+  const cm7HTML = render({ cssClasses, ast });
 
-  return cm7HTML;
+  if (el) mount({ el, cm7HTML, cssClasses });
+
+  return {
+    mount: (el) => mount({ el, cm7HTML, cssClasses }),
+  };
 };

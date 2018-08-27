@@ -1,16 +1,10 @@
-import Song from './models/Song';
-import createEl from './helpers/createEl';
 import zip from './helpers/zip';
 
-export default ({ cssClasses, ast }) => {
-  // pre: all arguments are checked!
-  const song = Song.fromAST(ast);
+export default ({ el, cm7HTML, cssClasses }) => {
+  const $el = document.querySelector(el);
+  $el.innerHTML = cm7HTML;
 
-  const $cm7 = createEl(`div.${cssClasses.cm7}`, {
-    children: [song.toDOM({ cssClasses })],
-  });
-
-  const $lines = $cm7.querySelectorAll(`.${cssClasses.line}`);
+  const $lines = $el.querySelectorAll(`.${cssClasses.line}`);
 
   for (const $line of $lines) {
     const $chords = $line.querySelectorAll(`.${cssClasses.chord}`);
@@ -28,6 +22,4 @@ export default ({ cssClasses, ast }) => {
       });
     }
   }
-
-  return $cm7.innerHTML;
 };

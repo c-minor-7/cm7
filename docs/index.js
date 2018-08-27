@@ -134,11 +134,9 @@ new Vue({
     renderCm7() {
       this.error = '';
       try {
-        return Cm7({ el: this.$refs.cm7Output, src: this.src });
+        Cm7({ el: this.$refs.cm7Output, src: this.src });
       } catch (e) {
-        if (!e.message.includes('Cm7')) throw e;
         this.error = e.message;
-        return '';
       }
     }
   },

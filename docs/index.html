@@ -19,7 +19,11 @@
       </section>
 
       <section class="cm7Editor">
-        <textarea class="cm7Src" v-model="src"></textarea>
+        <textarea
+          class="cm7Src"
+          :class="{ error }"
+          v-model="src"
+          @input="renderCm7"></textarea>
         <div class="song" ref="cm7Output"></div>
       </section>
     </main>

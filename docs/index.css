@@ -13,12 +13,18 @@
 
 .cm7Src {
   white-space: pre;
-  background: #e4e4e4;
+  background: #daffe1;
+  border: 1px solid #89ff86;
   font-family: monospace;
   padding: 1rem;
   resize: none;
   min-height: 100vh;
   width: 50%;
+}
+
+.cm7Src.error {
+  border-color: #ff8686;
+  background: #ffdada;
 }
 
 .song {

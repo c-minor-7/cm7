@@ -1,7 +1,10 @@
 import zip from './helpers/zip';
 
 export default ({ el, cm7HTML, cssClasses }) => {
-  const $el = document.querySelector(el);
+  if (el && typeof el !== 'string') throw Error('Cm7: `el` should be a string.');
+  if (typeof el === 'string' && el.trim().length <= 0) throw Error('Cm7: `el` is empty.');
+
+  const $el = typeof el === 'string'? document.querySelector(el): el;
   $el.innerHTML = cm7HTML;
 
   const $lines = $el.querySelectorAll(`.${cssClasses.line}`);

@@ -7,11 +7,24 @@
   </head>
   <body>
     <main id="app">
-      <textarea class="cm7Src" v-model="src"></textarea>
-      <div class="song" v-html="song"></div>
+      <section style="margin-bottom: 1rem;">
+        Songs:
+        <select v-model="templateId" ref="select">
+          <option
+            v-for="(template, i) in templates"
+            :value="i"
+            :id="template.name"
+            >{{ template.name }}</option>
+        </select>
+      </section>
+
+      <section class="cm7Editor">
+        <textarea class="cm7Src" v-model="src"></textarea>
+        <div class="song" v-html="song"></div>
+      </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/cm7@0.3.2/dist/Cm7.umd.js"></script>
     <script src="index.js"></script>
   </body>

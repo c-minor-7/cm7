@@ -1,6 +1,8 @@
 /* eslint-disable */
-const songs = {
-  'jimjim': `key=Eb
+const templates = [
+  {
+    name: 'jimjim',
+    src: `key=Eb
 
 1 6m
 ()在夜晚 說(早)晨
@@ -37,16 +39,101 @@ const songs = {
 ()如留下語(錄)誰來(看)
 7b 5/7
 懷念(只)可鋪滿被(單)`,
-};
+  },
+  {
+    name: 'here we are',
+    src: `key = D
+
+:: intro ::
+1 4
+1 4
+
+:: verse ::
+1 4
+() Here we are in the (future) now
+1 4 2m
+() Here we are in the (place) that we wanted to (be)
+7b
+To (be)
+
+1 4
+() Everything in your (fantasy)
+1 4 2m
+() Everything has be(come) your reali(ty)
+7b
+(Hmmm)
+
+:: pre-chorus ::
+4 5
+() What a fool I (used) to be
+4 5
+() Should have known you mean the (most) to me
+4   4
+() Now I finally (see) it
+2m
+Now I finally (know) it
+
+All I really want
+2m
+() All I really want is
+
+
+:: chorus ::
+1
+(I) just wanna be with you
+1
+(I) just wanna be with you
+       4
+Right (now)
+1
+(I) just wanna be with you
+1
+(I) just wanna be with you
+4
+Right (now)
+2
+I (didn't) know
+2m
+It (runs) so fast
+2m7b5
+And I (can't) catch up`,
+  },
+];
 
 new Vue({
   el: '#app',
   data: () => ({
-    src: ''
+    templates,
+    _templateId: 0,
+    src: templates[0].src,
+    error: '',
   }),
   computed: {
     song() {
-      return Cm7({ src: this.src });
-    }
+        this.error = '';
+      try {
+        return Cm7({ src: this.src });
+      } catch (e) {
+        if (!e.message.includes('Cm7')) throw e;
+        this.error = e.message;
+        return '';
+      }
+    },
+    templateId: {
+      set(to) {
+        if (to === this.$data._templateId) return;
+        if (this.templates.every(t => t.src !== this.src)
+          && !window.confirm('Your changes will not be saved!')) {
+          this.$refs.select.value = this.$data._templateId;
+          return;
+        }
+
+        this.$data._templateId = to;
+        this.src = this.templates[to].src;
+      },
+      get() {
+        return this.$data._templateId;
+      },
+    },
   },
 });

@@ -7,8 +7,8 @@
     "dist/"
   ],
   "scripts": {
-    "clean": "/bin/rm -rf dist docs/dist",
-    "build": "npm run clean && rollup -c && cp -r ./dist docs",
+    "clean": "/bin/rm -rf dist",
+    "build": "npm run clean && rollup -c && cp -r ./dist/Cm7.umd.min.js docs",
     "test": "jest",
     "coverage": "codecov",
     "preversion": "npm run test && npm run build",

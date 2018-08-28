@@ -7,13 +7,11 @@
     "dist/"
   ],
   "scripts": {
-    "clean": "/bin/rm -rf dist",
-    "build": "npm run clean && rollup -c",
-    "prebuild:docs": "npm run build",
-    "build:docs": "cp -r ./dist docs",
+    "clean": "/bin/rm -rf dist docs/dist",
+    "build": "npm run clean && rollup -c && cp -r ./dist docs",
     "test": "jest",
     "coverage": "codecov",
-    "preversion": " npm run test && npm run build",
+    "preversion": "npm run test && npm run build",
     "version": "git add -A"
   },
   "keywords": [],

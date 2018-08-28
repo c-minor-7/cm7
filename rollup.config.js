@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import deepmerge from 'deepmerge';
 
 const base_config = {
   input: 'src/main.js',
@@ -10,46 +11,38 @@ const base_config = {
   ],
 };
 
-const umd_config = {
-  ...base_config,
+const umd_config = deepmerge(base_config, {
   output: {
     file: 'dist/Cm7.umd.js',
     format: 'umd',
     name: 'Cm7',
   },
-};
+});
 
-const umd_min_config = {
-  ...umd_config,
+const umd_min_config = deepmerge(umd_config, {
   plugins: [
     terser(),
-    ...umd_config.plugins,
   ],
   output: {
-    ...umd_config.output,
     file: 'dist/Cm7.umd.min.js',
   },
-};
+});
 
-const es_config = {
-  ...base_config,
+const es_config = deepmerge(base_config, {
   output: {
     file: 'dist/Cm7.es.js',
     format: 'es',
   },
-};
+});
 
-const es_min_config = {
-  ...es_config,
+const es_min_config = deepmerge(es_config, {
   plugins: [
     terser(),
-    ...es_config.plugins,
   ],
   output: {
-    ...es_config.output,
     file: 'dist/Cm7.es.min.js',
   },
-};
+});
 
 const configs = [
   umd_config,

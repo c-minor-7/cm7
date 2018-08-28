@@ -5,13 +5,11 @@ exports[`cm7 here-we-are.cm7 should generate html that matches snapshot 1`] = `
   <div class=\\"cm7_section_label\\">intro</div>
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
+    <div class=\\"cm7_line_lyrics\\">1 4</div>
   </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_lyrics\\">:: verse ::</div>
-  </div>
+</div>
+<div class=\\"cm7_section\\">
+  <div class=\\"cm7_section_label\\">verse</div>
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
     <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">future</span> now</div>
@@ -39,9 +37,9 @@ exports[`cm7 here-we-are.cm7 should generate html that matches snapshot 1`] = `
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
     <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">Hmmm</span></div>
   </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_lyrics\\">:: pre-chorus ::</div>
-  </div>
+</div>
+<div class=\\"cm7_section\\">
+  <div class=\\"cm7_section_label\\">pre-chorus</div>
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span></div>
     <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> What a fool I <span class=\\"cm7_line_lyrics-beat\\">used</span> to be</div>
@@ -57,52 +55,6 @@ exports[`cm7 here-we-are.cm7 should generate html that matches snapshot 1`] = `
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
     <div class=\\"cm7_line_lyrics\\">Now I finally <span class=\\"cm7_line_lyrics-beat\\">know</span> it</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_lyrics\\">All I really want</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> All I really want is</div>
-  </div>
-</div>
-<div class=\\"cm7_section\\">
-  <div class=\\"cm7_section_label\\">chorus</div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\">Right <span class=\\"cm7_line_lyrics-beat\\">now</span></div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\">Right <span class=\\"cm7_line_lyrics-beat\\">now</span></div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">E</span></div>
-    <div class=\\"cm7_line_lyrics\\">I <span class=\\"cm7_line_lyrics-beat\\">didn't</span> know</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\">It <span class=\\"cm7_line_lyrics-beat\\">runs</span> so fast</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em7b5</span></div>
-    <div class=\\"cm7_line_lyrics\\">And I <span class=\\"cm7_line_lyrics-beat\\">can't</span> catch up</div>
   </div>
 </div>"
 `;
@@ -112,13 +64,11 @@ exports[`cm7 london-bridge-is-falling-down.cm7 should generate html that matches
   <div class=\\"cm7_section_label\\">intro</div>
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
+    <div class=\\"cm7_line_lyrics\\">1 4</div>
   </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_lyrics\\">:: verse ::</div>
-  </div>
+</div>
+<div class=\\"cm7_section\\">
+  <div class=\\"cm7_section_label\\">verse</div>
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
     <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">future</span> now</div>
@@ -146,9 +96,9 @@ exports[`cm7 london-bridge-is-falling-down.cm7 should generate html that matches
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
     <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">Hmmm</span></div>
   </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_lyrics\\">:: pre-chorus ::</div>
-  </div>
+</div>
+<div class=\\"cm7_section\\">
+  <div class=\\"cm7_section_label\\">pre-chorus</div>
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span></div>
     <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> What a fool I <span class=\\"cm7_line_lyrics-beat\\">used</span> to be</div>
@@ -164,52 +114,6 @@ exports[`cm7 london-bridge-is-falling-down.cm7 should generate html that matches
   <div class=\\"cm7_line\\">
     <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
     <div class=\\"cm7_line_lyrics\\">Now I finally <span class=\\"cm7_line_lyrics-beat\\">know</span> it</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_lyrics\\">All I really want</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> All I really want is</div>
-  </div>
-</div>
-<div class=\\"cm7_section\\">
-  <div class=\\"cm7_section_label\\">chorus</div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\">Right <span class=\\"cm7_line_lyrics-beat\\">now</span></div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">I</span> just wanna be with you</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\">Right <span class=\\"cm7_line_lyrics-beat\\">now</span></div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">E</span></div>
-    <div class=\\"cm7_line_lyrics\\">I <span class=\\"cm7_line_lyrics-beat\\">didn't</span> know</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\">It <span class=\\"cm7_line_lyrics-beat\\">runs</span> so fast</div>
-  </div>
-  <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em7b5</span></div>
-    <div class=\\"cm7_line_lyrics\\">And I <span class=\\"cm7_line_lyrics-beat\\">can't</span> catch up</div>
   </div>
 </div>"
 `;

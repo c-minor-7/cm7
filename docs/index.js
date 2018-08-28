@@ -46,7 +46,9 @@ const templates = [
 
 :: intro ::
 1 4
+-
 1 4
+-
 
 :: verse ::
 1 4
@@ -72,7 +74,7 @@ To (be)
 () Now I finally (see) it
 2m
 Now I finally (know) it
-
+-
 All I really want
 2m
 () All I really want is

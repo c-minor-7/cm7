@@ -37,7 +37,7 @@ describe('puppeteer', () => {
 
   it('should generate something in the element given', async () => {
     await page.evaluate((src, cssClasses) => {
-      Cm7({ // eslint-disable-line no-undef
+      new Cm7({ // eslint-disable-line no-undef
         el: '#display',
         src,
       });
@@ -50,7 +50,7 @@ describe('puppeteer', () => {
 
   it('should put chords in place', async () => {
     await page.evaluate(src => {
-      Cm7({ // eslint-disable-line no-undef
+      new Cm7({ // eslint-disable-line no-undef
         el: '#display',
         src,
       });

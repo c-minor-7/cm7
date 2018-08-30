@@ -354,7 +354,7 @@
 	  lyricsBeat: 'cm7_line_lyrics-beat',
 	};
 
-	var main = ({ el, src, cssClasses }) => {
+	function Cm7({ el, src, cssClasses }) {
 	  if (typeof src !== 'string') throw Error('Cm7: `src` should be a string.');
 
 	  const ast = parseCm7(src);
@@ -378,8 +378,8 @@
 	  return {
 	    mount: (el) => mount({ el, cm7HTML, cssClasses }),
 	  };
-	};
+	}
 
-	return main;
+	return Cm7;
 
 })));

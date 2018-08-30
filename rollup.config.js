@@ -4,7 +4,7 @@ import { terser } from 'rollup-plugin-terser';
 import deepmerge from 'deepmerge';
 
 const base_config = {
-  input: 'src/main.js',
+  input: 'src/Cm7.js',
   plugins: [
     resolve(),
     commonjs(),

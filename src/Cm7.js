@@ -3,7 +3,7 @@ import render from './render';
 import mount from './mount';
 import defaultCssClasses from './defaultCssClasses';
 
-export default ({ el, src, cssClasses }) => {
+export default function({ el, src, cssClasses }) {
   if (typeof src !== 'string') throw Error('Cm7: `src` should be a string.');
 
   const ast = parseCm7(src);
@@ -27,4 +27,4 @@ export default ({ el, src, cssClasses }) => {
   return {
     mount: (el) => mount({ el, cm7HTML, cssClasses }),
   };
-};
+}

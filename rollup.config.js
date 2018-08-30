@@ -44,11 +44,18 @@ const es_min_config = deepmerge(es_config, {
   },
 });
 
+const docs_config = deepmerge(umd_config, {
+  output: {
+    file: 'docs/Cm7.umd.js',
+  },
+});
+
 const configs = [
   umd_config,
   umd_min_config,
   es_config,
   es_min_config,
+  docs_config,
 ];
 
 // console.log(JSON.stringify(configs, null, 2));

@@ -44,3 +44,9 @@
 .cm7_section {
   margin-bottom: 1rem; 
 }
+
+.cm7_section_label {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}

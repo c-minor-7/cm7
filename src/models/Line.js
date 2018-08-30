@@ -11,23 +11,27 @@ export default class Line {
 
   toDOM({ cssClasses, key }) {
     const children = [];
-    if (this.chords.length > 0) {
-      children.push(createEl(`div.${cssClasses.chordLine}`, {
-        children: this.chords.map(chord => chord.toDOM({ cssClasses, key })),
-      }));
-    }
+    children.push(createEl(`div.${cssClasses.chordLine}`, {
+      children: [
+        ...this.chords.map(chord => chord.toDOM({ cssClasses, key })),
+        '\u00A0',
+      ],
+    }));
 
     if (this.lyrics.length > 0) {
       children.push(createEl(`div.${cssClasses.lyricLine}`, {
-        children: this.lyrics.map(({ type, text }) => {
-          if (type === 'lyrics_beat') {
-            return createEl(`span.${cssClasses.lyricsBeat}`, {
-              children: [text.slice(1, -1)],
-            });
-          }
+        children: [
+          ...this.lyrics.map(({ type, text }) => {
+            if (type === 'lyrics_beat') {
+              return createEl(`span.${cssClasses.lyricsBeat}`, {
+                children: [text.slice(1, -1)],
+              });
+            }
 
-          return text;
-        }),
+            return text;
+          }),
+          '\u00A0',
+        ],
       })
       );
     }

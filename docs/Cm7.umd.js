@@ -146,10 +146,7 @@
 	      throw Error(`Cm7: base (${base}) is not a valid relative note.`);
 	    }
 
-	    this.root = root;
-	    this.quality = quality;
-	    this.additions = additions;
-	    this.base = base;
+	    Object.assign(this, { root, quality, additions, base });
 	  }
 
 	  display(key) {
@@ -200,8 +197,7 @@
 
 	class Line {
 	  constructor({ chords, lyrics }) {
-	    this.chords = chords;
-	    this.lyrics = lyrics;
+	    Object.assign(this, { chords, lyrics });
 	  }
 
 	  toDOM({ cssClasses, key }) {
@@ -250,8 +246,7 @@
 
 	class Section {
 	  constructor({ label, lines }) {
-	    this.label = label;
-	    this.lines = lines;
+	    Object.assign(this, { label, lines });
 	  }
 
 	  toDOM({ key, cssClasses }) {
@@ -278,8 +273,7 @@
 
 	class Song {
 	  constructor({ configs, sections }) {
-	    this.configs = configs;
-	    this.sections = sections;
+	    Object.assign(this, { configs, sections });
 	  }
 
 	  toDOM({ cssClasses }) {

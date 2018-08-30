@@ -4,57 +4,57 @@ exports[`cm7 here-we-are.cm7 should generate html that matches snapshot 1`] = `
 "<div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\">intro</div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\">1 4</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\">1 4&nbsp;</div>
   </div>
 </div>
 <div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\">verse</div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">future</span> now</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">future</span> now&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">place</span> that we wanted to <span class=\\"cm7_line_lyrics-beat\\">be</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">place</span> that we wanted to <span class=\\"cm7_line_lyrics-beat\\">be</span>&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
-    <div class=\\"cm7_line_lyrics\\">To <span class=\\"cm7_line_lyrics-beat\\">be</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\">To <span class=\\"cm7_line_lyrics-beat\\">be</span>&nbsp;</div>
   </div>
 </div>
 <div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\"></div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything in your <span class=\\"cm7_line_lyrics-beat\\">fantasy</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything in your <span class=\\"cm7_line_lyrics-beat\\">fantasy</span>&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything has be<span class=\\"cm7_line_lyrics-beat\\">come</span> your reali<span class=\\"cm7_line_lyrics-beat\\">ty</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything has be<span class=\\"cm7_line_lyrics-beat\\">come</span> your reali<span class=\\"cm7_line_lyrics-beat\\">ty</span>&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">Hmmm</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">Hmmm</span>&nbsp;</div>
   </div>
 </div>
 <div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\">pre-chorus</div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> What a fool I <span class=\\"cm7_line_lyrics-beat\\">used</span> to be</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> What a fool I <span class=\\"cm7_line_lyrics-beat\\">used</span> to be&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Should have known you mean the <span class=\\"cm7_line_lyrics-beat\\">most</span> to me</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Should have known you mean the <span class=\\"cm7_line_lyrics-beat\\">most</span> to me&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Now I finally <span class=\\"cm7_line_lyrics-beat\\">see</span> it</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Now I finally <span class=\\"cm7_line_lyrics-beat\\">see</span> it&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\">Now I finally <span class=\\"cm7_line_lyrics-beat\\">know</span> it</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\">Now I finally <span class=\\"cm7_line_lyrics-beat\\">know</span> it&nbsp;</div>
   </div>
 </div>"
 `;
@@ -63,57 +63,57 @@ exports[`cm7 london-bridge-is-falling-down.cm7 should generate html that matches
 "<div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\">intro</div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\">1 4</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\">1 4&nbsp;</div>
   </div>
 </div>
 <div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\">verse</div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">future</span> now</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">future</span> now&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">place</span> that we wanted to <span class=\\"cm7_line_lyrics-beat\\">be</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Here we are in the <span class=\\"cm7_line_lyrics-beat\\">place</span> that we wanted to <span class=\\"cm7_line_lyrics-beat\\">be</span>&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
-    <div class=\\"cm7_line_lyrics\\">To <span class=\\"cm7_line_lyrics-beat\\">be</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\">To <span class=\\"cm7_line_lyrics-beat\\">be</span>&nbsp;</div>
   </div>
 </div>
 <div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\"></div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything in your <span class=\\"cm7_line_lyrics-beat\\">fantasy</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything in your <span class=\\"cm7_line_lyrics-beat\\">fantasy</span>&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything has be<span class=\\"cm7_line_lyrics-beat\\">come</span> your reali<span class=\\"cm7_line_lyrics-beat\\">ty</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">D</span><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">Em</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Everything has be<span class=\\"cm7_line_lyrics-beat\\">come</span> your reali<span class=\\"cm7_line_lyrics-beat\\">ty</span>&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">Hmmm</span></div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">C</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\">Hmmm</span>&nbsp;</div>
   </div>
 </div>
 <div class=\\"cm7_section\\">
   <div class=\\"cm7_section_label\\">pre-chorus</div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> What a fool I <span class=\\"cm7_line_lyrics-beat\\">used</span> to be</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> What a fool I <span class=\\"cm7_line_lyrics-beat\\">used</span> to be&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Should have known you mean the <span class=\\"cm7_line_lyrics-beat\\">most</span> to me</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">A</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Should have known you mean the <span class=\\"cm7_line_lyrics-beat\\">most</span> to me&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">G</span></div>
-    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Now I finally <span class=\\"cm7_line_lyrics-beat\\">see</span> it</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">G</span><span class=\\"cm7_chord\\">G</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\"><span class=\\"cm7_line_lyrics-beat\\"></span> Now I finally <span class=\\"cm7_line_lyrics-beat\\">see</span> it&nbsp;</div>
   </div>
   <div class=\\"cm7_line\\">
-    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span></div>
-    <div class=\\"cm7_line_lyrics\\">Now I finally <span class=\\"cm7_line_lyrics-beat\\">know</span> it</div>
+    <div class=\\"cm7_line_chords\\"><span class=\\"cm7_chord\\">Em</span>&nbsp;</div>
+    <div class=\\"cm7_line_lyrics\\">Now I finally <span class=\\"cm7_line_lyrics-beat\\">know</span> it&nbsp;</div>
   </div>
 </div>"
 `;

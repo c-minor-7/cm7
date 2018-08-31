@@ -2,6 +2,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import deepmerge from 'deepmerge';
+import babel from 'rollup-plugin-babel';
 
 const base_config = {
   input: 'src/Cm7.js',

@@ -9,6 +9,7 @@ const base_config = {
   plugins: [
     resolve(),
     commonjs(),
+    babel(),
   ],
 };
 
